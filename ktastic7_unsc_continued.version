@@ -1,0 +1,9 @@
+{
+  "masterVersionFile": "https://raw.githubusercontent.com/ktastic7/UNSC-Continued/main/ktastic7_unsc_continued.version",
+  "modName": "United Nations Space Command - Continued",
+  "modVersion": {
+    "major": 1,
+    "minor": 3,
+    "patch": "0"
+  }
+}
