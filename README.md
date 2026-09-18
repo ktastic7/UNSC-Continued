@@ -91,18 +91,6 @@ UNSC-Continued/
 
 See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for the development workflow and [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md) for the release process.
 
-## Development Model
-
-For the current transition period:
-
-- **Google Drive remains the authoritative release/provenance archive.**
-- **GitHub is the public source repository, working-development surface, and release mirror.**
-- `main` represents the latest validated public release.
-- `development` is intended for normal ongoing work.
-- Feature/fix branches may be created from `development` when useful.
-
-The repository was initially bootstrapped directly on `main` with 1.03 before the branch workflow was established. That exact 1.03 release subsequently passed its final in-game seal and was promoted in the authoritative Google Drive archive, so `main` now serves as the clean validated 1.03 baseline from which the normal branch workflow begins.
-
 ## Version Checker
 
 Beginning with 1.03, the repository root contains:
