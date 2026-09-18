@@ -1,42 +1,32 @@
 # Changelog
 
-This is the public-facing changelog for **United Nations Space Command - Continued**.
+Public release history for **United Nations Space Command - Continued**.
 
-Internal build audits, validation records, migration records, and repository-governance documents are maintained separately from this public summary.
-
-## 1.03 — In-Game Validated Release
+## 1.03
 
 ### Version Checker support
 
 - Added passive Version Checker-compatible metadata.
 - Added root `unsc_continued.version`.
 - Added `data/config/version/version_files.csv` registration.
-- Master declaration points to the public GitHub repository.
-- Final 1.03 declaration uses:
-  - major `1`
-  - minor `3`
-  - patch `0`
-- Version Checker support remains data-only/passive and does not add a new hard Java/runtime dependency.
-- `directDownloadURL` and `changelogURL` remain intentionally deferred until public-release links are deliberately configured.
+- Public version metadata is hosted through this GitHub repository.
+- Version Checker support remains optional and does not add a new hard runtime dependency.
 
 ### Runtime behavior
 
-- No gameplay or content changes from 1.02p.
-- Loader ID remains `UNSC`.
-- Faction ID remains `unsc`.
-- Canonical `unsc_*` content IDs remain unchanged.
-- World generation, markets, ships, weapons, combat behavior, integrations, and save-migration policy remain unchanged.
+1.03 contains no gameplay or content changes from 1.02p.
 
-### Validation and promotion
+The following remain unchanged:
 
-- The exact final 1.03 promotion candidate passed the in-game release check.
-- The exact tested runtime and Development Source bytes were promoted unchanged into the authoritative Google Drive release archive.
-- Drive read-back SHA-256 values matched the sealed candidate hashes.
-- Runtime SHA-256: `a32990a1d735b5831d125c467a3366866b14865e7d15d74d73f656b5b9799f67`
-- Development Source SHA-256: `41d664a2719f79d8832f2054b62592d6edd29719be6bfaa193b6a3ae74bc1629`
-- `UNSC.jar` SHA-256: `f1d68c9309534137ff8206229a9e2e2dc41a35ee12ca3cbf9c8de45cdafdb6bb`
-
-**Status:** in-game validated / current authoritative release.
+- loader ID `UNSC`;
+- faction ID `unsc`;
+- canonical `unsc_*` content IDs;
+- world generation;
+- markets and industries;
+- ships, fighters, and weapons;
+- combat behavior;
+- supported integrations;
+- save-migration policy.
 
 ---
 
@@ -53,19 +43,14 @@ Internal build audits, validation records, migration records, and repository-gov
   - canonical `unsc_*` content namespace
 - No gameplay/content changes from 1.02o.
 
-**Status:** in-game validated / superseded by 1.03.
-
 ---
 
 ## 1.02o
 
-- Released the previously validated ST-16 Epsilon Eridani hyperspace-clearing improvement.
-- Released the previously validated ST-12 `UNSC_AddMarketplace` hardening.
-- Replaced boxed helper booleans with primitive booleans while preserving explicit market routing.
-- Added development-only exact-registry validation for authored market IDs.
-- Preserved the validated Epsilon Eridani system layout, market layout, wreck design, integrations, and content IDs.
-
-**Status:** in-game validated / superseded by 1.02p.
+- Added the validated two-stage Epsilon Eridani hyperspace-clearing improvement.
+- Hardened `UNSC_AddMarketplace` boolean handling while preserving explicit market routing.
+- Added development-time validation for authored market IDs.
+- Preserved the existing Epsilon Eridani layout, market layout, wreck design, integrations, and content IDs.
 
 ---
 
@@ -106,7 +91,7 @@ These starting-market changes apply to fresh authored world generation rather th
 
 ### Identifier namespace standardization
 
-- Standardized 82 approved UNSC-owned IDs to the canonical lowercase `unsc_*` namespace.
+- Standardized 82 UNSC-owned IDs to the canonical lowercase `unsc_*` namespace.
 - Preserved loader mod ID `UNSC` and faction ID `unsc`.
 - Renamed the custom Goalkeeper projectile to `unsc_pd_ballistic_shot`.
 - Made six authored UNSC market IDs explicit.
@@ -115,7 +100,7 @@ These starting-market changes apply to fresh authored world generation rather th
 - Preserved the authored 20-wreck design:
   - 6 normal/free recoverables
   - 14 Story Point recovery candidates
-- No runtime alias/automatic old-save migration layer was added.
+- No broad automatic old-save migration layer was added.
 
 ---
 
@@ -123,11 +108,11 @@ These starting-market changes apply to fresh authored world generation rather th
 
 - Added Industrial Evolution embassy whitelist support.
 - Added all eight principal UNSC hulls to Industrial Evolution reverse-engineering and Derelict Industries printing whitelists.
-- Rebuilt the production JAR against real target/dependency references.
+- Rebuilt the production JAR against the intended game/mod dependencies.
 - Finalized dormant Harpoon Battery handling.
 - Removed stale Nex data.
 - Removed dead loose duplicate Vanilla hullmod source copies.
-- Cleaned the runtime distribution and retained current player-facing material.
+- Cleaned the runtime distribution.
 
 ---
 
@@ -143,7 +128,7 @@ These starting-market changes apply to fresh authored world generation rather th
 ## 1.02j — Known Broken
 
 - Attempted a narrow wreck-generation hotfix.
-- Did not fix the actual world-generation crash because the unsafe production-stub issue remained.
+- Did not fix the inherited world-generation crash.
 
 Do not use as a stable release.
 
@@ -151,9 +136,8 @@ Do not use as a stable release.
 
 ## 1.02i — Known Broken
 
-- Contained several maintenance/robustness changes.
-- Production compilation used unsafe guessed Starsector stubs.
-- Incorrect `static final` values were inlined into runtime bytecode and broke fresh world generation.
+- Included maintenance/robustness changes.
+- A build-reference error caused invalid compiled runtime constants and broke fresh world generation.
 
 Do not use as a stable release.
 
@@ -162,8 +146,7 @@ Do not use as a stable release.
 ## 1.02h
 
 - Corrected a debris-field world-generation failure involving `baseSalvageXP`.
-- Returned to the running game's default salvage-XP behavior.
-- Established a known-good historical baseline.
+- Returned to the game's default salvage-XP behavior.
 
 ---
 
@@ -212,4 +195,4 @@ Do not use as a stable release.
 
 Earlier modernization work included hull-ID cleanup, UTF-8/spelling fixes, Nex colony-name support, Epsilon Eridani development, optional integration work, profiling, and save-compatibility maintenance.
 
-For exact historical behavior, consult the preserved release artifacts rather than assuming every intermediate version is suitable for current use.
+For exact historical behavior, consult the preserved release packages rather than assuming every intermediate build is suitable for current use.

@@ -4,28 +4,27 @@ A continued version of AppleMarineXX's **United Nations Space Command** faction 
 
 **Original mod:** AppleMarineXX  
 **Continued and maintained by:** Kemptastic  
+**Current release:** 1.03  
 **Starsector target:** 0.98a-RC8  
 **Loader mod ID:** `UNSC`  
 **Faction ID:** `unsc`
 
-> **Current validated release: 1.03.**  
-> The repository `main` branch contains the source/assets corresponding to the authoritative, in-game-validated 1.03 release.
->
-> For normal installation, use the packaged files on the **GitHub Releases** page rather than GitHub's automatically generated "Source code" ZIP.
+> For normal installation, download the packaged runtime ZIP from the **GitHub Releases** page.  
+> GitHub's automatically generated "Source code" archives are not the playable mod package.
 
 ## Overview
 
 UNSC Continued maintains and modernizes the original Halo-themed UNSC faction mod while preserving its established gameplay identity.
 
-The project currently includes:
+The project includes:
 
 - UNSC ships, fighters, weapons, hullmods, faction data, doctrine, variants, graphics, music, and sound assets.
 - A hand-authored Epsilon Eridani system featuring Reach, Tribute, Circumstance, Beta Gabriel, Site 17, exploration content, derelicts, and other UNSC locations.
 - Nexerelin integration, including UNSC colony-expedition naming support.
 - Optional Industrial Evolution integration.
 - Compatibility data for supported third-party mods where applicable.
-- Version Checker-compatible update metadata beginning with the 1.03 line.
-- A complete public source tree under `src/`.
+- Version Checker-compatible update metadata beginning with 1.03.
+- Public Java source and development utilities under `src/`.
 
 ## Requirements
 
@@ -36,80 +35,78 @@ The project currently includes:
 
 ### Optional integrations
 
-The mod contains supported integration paths for:
+Supported integration paths include:
 
 - **Nexerelin**
 - **Industrial Evolution**
 - **Commissioned Crews**
 - **Starpocalypse**
 
-Optional integrations are intended to remain inert when their corresponding mod is absent unless otherwise documented.
+Optional integrations are intended to remain inactive when their corresponding mod is absent unless otherwise documented.
 
-Version Checker-compatible metadata is included beginning with 1.03. It does **not** add a new hard runtime dependency.
+Version Checker-compatible metadata is included beginning with 1.03 and does **not** add a new hard runtime dependency.
 
 ## Installation
 
-1. Download the current playable runtime ZIP from the repository's **Releases** page.
-2. Extract the contained folder into your Starsector `mods` directory.
-3. Make sure only one copy of UNSC/UNSC Continued is enabled at a time.
-4. Enable **LazyLib** and any optional supported mods you want to use.
-5. Launch Starsector and enable:
-   - `United Nations Space Command - Continued`
+1. Open the repository's **Releases** page.
+2. Download the attached runtime ZIP named like:
+   `United Nations Space Command - Continued (VERSION).zip`
+3. Extract the contained mod folder into your Starsector `mods` directory.
+4. Make sure only one copy of UNSC / UNSC Continued is enabled at a time.
+5. Enable **LazyLib** and any optional supported mods you use.
+6. Enable **United Nations Space Command - Continued** in the Starsector launcher.
 
 The technical loader ID remains `UNSC` for compatibility.
 
 ## Save Compatibility
 
-The project underwent a major identifier namespace migration in the 1.02m line.
+The project completed a major identifier namespace migration in the 1.02m line.
 
-- Saves created with the modern `unsc_*` namespace should generally follow the compatibility notes for the specific release.
-- Very old saves from before the namespace migration may contain obsolete serialized IDs.
-- No broad runtime alias/automatic migration layer is shipped.
-- Two private development saves were migrated manually during the namespace project, but that process is not a general-purpose public save converter.
+- Releases using the modern namespace use canonical `unsc_*` content IDs.
+- Very old saves from before that migration may contain obsolete serialized IDs and may not load correctly with current releases.
+- The mod does not ship a broad automatic migration layer for those older saves.
 
-For a major upgrade, keep a backup of your save and review the release notes before replacing an older version.
+Back up important saves before upgrading across major historical changes and review the release notes for the version you are installing.
 
-## Repository Layout
+## Repository Contents
 
-This repository intentionally contains the **full mod**, including runtime assets.
+This repository contains the full mod together with its public source.
 
 ```text
 UNSC-Continued/
-├── data/                  Playable runtime data
+├── data/                  Runtime data/config/content
 ├── graphics/              Runtime graphics
 ├── sounds/                Runtime sound/music
 ├── jars/UNSC.jar          Compiled runtime JAR
 ├── mod_info.json          Starsector mod metadata
-├── startup.txt            Development/testing startup commands
-├── unsc_continued.version Version Checker master/runtime declaration
-├── src/                   Complete development source snapshot
-│   ├── data/              Java source
-│   ├── tools/             Development-only validation tools
-│   └── version-checker/   Version Checker source/reference files
-└── docs/                  Development and release workflow documentation
+├── unsc_continued.version Version Checker declaration
+├── src/                   Java source and development utilities
+└── docs/                  Public contributor/download documentation
 ```
 
-See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for the development workflow and [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md) for the release process.
+For source-oriented information, see [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+
+For release/download information, see [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md).
 
 ## Version Checker
 
-Beginning with 1.03, the repository root contains:
+Beginning with 1.03, the repository includes:
 
 ```text
 unsc_continued.version
 ```
 
-The shipped registration file is:
+and the shipped registration file:
 
 ```text
 data/config/version/version_files.csv
 ```
 
-The master version declaration currently resolves from the repository's default branch. For this reason, future-version declarations should normally remain on `development` until that version is actually ready to become the public release.
+These files allow compatible Version Checker implementations to identify the current public release.
 
 ## Reporting Bugs
 
-When reporting a problem, please include as much of the following as practical:
+When reporting a reproducible problem, please include as much of the following as practical:
 
 - UNSC Continued version.
 - Starsector version.
@@ -118,19 +115,17 @@ When reporting a problem, please include as much of the following as practical:
 - `starsector.log` when the issue may involve loading, scripts, world generation, markets, or integrations.
 - A screenshot when the issue is primarily visual.
 
-GitHub Issues are the preferred public place for reproducible bug reports once issue tracking is enabled for the project.
+GitHub Issues are the preferred public place for reproducible bug reports when issue tracking is enabled for the project.
 
 ## Contributing
 
 Contributions are welcome when they fit the project's scope and permissions.
 
-Please read:
+Before submitting code or assets, please read:
 
 - [CREDITS.md](CREDITS.md)
 - [PERMISSIONS.md](PERMISSIONS.md)
 - [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)
-
-before submitting code or assets.
 
 ## Credits and Permissions
 
