@@ -1,0 +1,18 @@
+UNSC - Continued 1.03
+=====================
+
+Version Checker support
+-----------------------
+- Added passive Version Checker/LunaLib version-protocol support.
+- Added root declaration unsc_continued.version.
+- Added data/config/version/version_files.csv registration.
+- Master declaration points to the public GitHub repository raw file at:
+  https://raw.githubusercontent.com/ktastic7/UNSC-Continued/HEAD/unsc_continued.version
+- Final 1.03 declaration uses major 1, minor 3, patch 0.
+- Version Checker/LunaLib remains optional; no hard dependency or runtime Java linkage is added.
+- directDownloadURL and changelogURL remain deferred until public release assets/links are intentionally configured.
+
+No gameplay/content changes
+---------------------------
+- Carries forward authoritative 1.02p behavior unchanged.
+- Loader ID UNSC, faction ID unsc, canonical unsc_* IDs, dependencies, worldgen, markets, ships, weapons, combat behavior and save-migration rules are unchanged.
