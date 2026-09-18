@@ -174,6 +174,8 @@ After Drive promotion:
 
 Normal future development resumes on `development`, not directly on `main`.
 
+For the one-time 1.03 repository bootstrap, the validated 1.03 source/assets were already present directly on `main` before `development` existed. That bootstrap is accepted as the initial stable baseline rather than being rewritten solely to simulate a historical pull request.
+
 ## 13. Create the Git Tag and GitHub Release
 
 Create a tag using the `v` prefix.
@@ -229,6 +231,8 @@ https://raw.githubusercontent.com/ktastic7/UNSC-Continued/HEAD/unsc_continued.ve
 ```
 
 Because `HEAD` resolves through the repository default branch, the public master file should match the current public release.
+
+Keep `main` as the repository default branch while this URL is used. Work-in-progress version declarations should remain on `development` until release promotion.
 
 For 1.03, `directDownloadURL` and `changelogURL` are intentionally deferred.
 
@@ -287,21 +291,41 @@ After the GitHub release is verified:
 3. begin the next work only after the next scope is selected;
 4. do not preemptively advertise the next final version from `main`.
 
-## 18. Current 1.03 Bootstrap Note
+## 18. 1.03 Bootstrap — Completed Drive Promotion
 
-The repository was bootstrapped before the branch workflow was established, so the 1.03 final-labeled candidate currently exists directly on `main`.
+The repository was bootstrapped before the branch workflow was established, so the exact 1.03 source/assets were placed directly on `main`.
 
-Current known 1.03 candidate identity:
+The final 1.03 artifact passed its exact-artifact in-game seal and was promoted unchanged in the authoritative Google Drive release archive.
 
+Authoritative 1.03 identity:
+
+- runtime:
+  `United Nations Space Command - Continued (1.03).zip`
+- runtime Drive ID:
+  `1lromk6OmHUfu6_8CuHS2dHcy3QA9SYnY`
 - runtime SHA-256:
   `a32990a1d735b5831d125c467a3366866b14865e7d15d74d73f656b5b9799f67`
+- Development Source:
+  `United Nations Space Command - Continued (1.03) - Development Source.zip`
+- Development Source Drive ID:
+  `1rTZkZh-7vnrfd8qJXbH0JfYUcWOkHsDl`
 - Development Source SHA-256:
   `41d664a2719f79d8832f2054b62592d6edd29719be6bfaa193b6a3ae74bc1629`
 - `UNSC.jar` SHA-256:
   `f1d68c9309534137ff8206229a9e2e2dc41a35ee12ca3cbf9c8de45cdafdb6bb`
 
-The current GitHub `main` tree was checked read-only and contains the matching 1.03 mod metadata, Version Checker registration/master file, runtime JAR, and Java source state.
+The exact tested runtime/source candidate bytes were copied into the immutable Drive release archive without rebuilding, editing, or repacking, and raw Drive read-back hashes matched the sealed candidate hashes.
 
-However, 1.03 remains a promotion candidate until its exact-artifact in-game seal is completed.
+The current GitHub `main` tree contains the corresponding 1.03 mod metadata, Version Checker declaration/registration, runtime JAR, Java source, and assets.
 
-Do not publish/tag it as the final GitHub release merely because the source tree is already on `main`.
+**1.03 status: IN-GAME VALIDATED / AUTHORITATIVE.**
+
+The remaining GitHub bootstrap sequence is:
+
+1. commit the final 1.03 repository-status documentation to `main`;
+2. create `development` from that clean 1.03 `main` baseline;
+3. keep `main` as the default branch;
+4. tag the final `main` commit as `v1.03`;
+5. create the GitHub Release using the exact authoritative Drive runtime and Development Source ZIPs;
+6. verify the uploaded release assets against the authoritative SHA-256 values;
+7. return normal ongoing work to `development`.

@@ -8,8 +8,8 @@ A continued version of AppleMarineXX's **United Nations Space Command** faction 
 **Loader mod ID:** `UNSC`  
 **Faction ID:** `unsc`
 
-> **Repository status:** The current repository snapshot contains the **1.03 promotion candidate**.  
-> The latest fully promoted, in-game-validated release remains **1.02p** until the exact 1.03 candidate completes its final release seal.
+> **Current validated release: 1.03.**  
+> The repository `main` branch contains the source/assets corresponding to the authoritative, in-game-validated 1.03 release.
 >
 > For normal installation, use the packaged files on the **GitHub Releases** page rather than GitHub's automatically generated "Source code" ZIP.
 
@@ -97,11 +97,11 @@ For the current transition period:
 
 - **Google Drive remains the authoritative release/provenance archive.**
 - **GitHub is the public source repository, working-development surface, and release mirror.**
-- `main` is intended to represent the latest validated public release.
+- `main` represents the latest validated public release.
 - `development` is intended for normal ongoing work.
 - Feature/fix branches may be created from `development` when useful.
 
-The repository was initially bootstrapped directly on `main` with the 1.03 candidate before the branch workflow was established. Future work should use the branch model above.
+The repository was initially bootstrapped directly on `main` with 1.03 before the branch workflow was established. That exact 1.03 release subsequently passed its final in-game seal and was promoted in the authoritative Google Drive archive, so `main` now serves as the clean validated 1.03 baseline from which the normal branch workflow begins.
 
 ## Version Checker
 

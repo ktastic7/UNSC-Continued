@@ -26,7 +26,9 @@ Target policy:
 - Contains the public Version Checker master declaration.
 - Should not be used for normal experimental editing.
 
-Bootstrap note: the repository was initially populated directly on `main` with the 1.03 promotion candidate before the branch workflow was established. After `development` is created, future normal work should not repeat that pattern.
+Bootstrap note: the repository was initially populated directly on `main` with 1.03 before the branch workflow was established. The exact 1.03 build subsequently passed its final in-game seal and was promoted unchanged in the authoritative Google Drive release archive. `main` therefore serves as the clean validated 1.03 baseline from which the normal branch workflow begins.
+
+After the one-time 1.03 repository-status documentation cleanup is committed, future normal development should not be performed directly on `main`.
 
 ### `development`
 
@@ -194,6 +196,8 @@ Important rules:
 - keep future declarations on `development` until release promotion;
 - Version Checker support must remain passive unless a future scope explicitly changes its dependency/runtime architecture;
 - `directDownloadURL` and `changelogURL` should remain deferred until release-link handling is deliberately designed and verified.
+
+The repository default branch should remain `main` while this `HEAD`-based master URL is used, so the public declaration continues to describe the current validated public release rather than an in-progress development version.
 
 ## 10. Commit Guidelines
 

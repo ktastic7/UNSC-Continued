@@ -4,7 +4,7 @@ This is the public-facing changelog for **United Nations Space Command - Continu
 
 Internal build audits, validation records, migration records, and repository-governance documents are maintained separately from this public summary.
 
-## 1.03 — Promotion Candidate
+## 1.03 — In-Game Validated Release
 
 ### Version Checker support
 
@@ -27,7 +27,16 @@ Internal build audits, validation records, migration records, and repository-gov
 - Canonical `unsc_*` content IDs remain unchanged.
 - World generation, markets, ships, weapons, combat behavior, integrations, and save-migration policy remain unchanged.
 
-**Current status:** final-labeled promotion candidate pending exact-artifact in-game release seal.
+### Validation and promotion
+
+- The exact final 1.03 promotion candidate passed the in-game release check.
+- The exact tested runtime and Development Source bytes were promoted unchanged into the authoritative Google Drive release archive.
+- Drive read-back SHA-256 values matched the sealed candidate hashes.
+- Runtime SHA-256: `a32990a1d735b5831d125c467a3366866b14865e7d15d74d73f656b5b9799f67`
+- Development Source SHA-256: `41d664a2719f79d8832f2054b62592d6edd29719be6bfaa193b6a3ae74bc1629`
+- `UNSC.jar` SHA-256: `f1d68c9309534137ff8206229a9e2e2dc41a35ee12ca3cbf9c8de45cdafdb6bb`
+
+**Status:** in-game validated / current authoritative release.
 
 ---
 
@@ -44,7 +53,7 @@ Internal build audits, validation records, migration records, and repository-gov
   - canonical `unsc_*` content namespace
 - No gameplay/content changes from 1.02o.
 
-**Status:** in-game validated / promoted release.
+**Status:** in-game validated / superseded by 1.03.
 
 ---
 
