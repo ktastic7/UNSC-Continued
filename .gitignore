@@ -1,0 +1,74 @@
+# ----------------------------------------------------------------------
+# UNSC Continued - Git ignore rules
+# ----------------------------------------------------------------------
+
+# Build/output directories
+/build/
+/out/
+/dist/
+/target/
+/classes/
+/bin/
+
+# Compiled loose Java output.
+# The intentionally tracked runtime JAR at jars/UNSC.jar is NOT ignored.
+*.class
+
+# Local build configuration / machine-specific paths
+build-config.ps1
+build-config.local.ps1
+local.properties
+.env
+.env.*
+/local-deps/
+/local-references/
+
+# IDE/editor metadata
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.code-workspace
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs / JVM crash reports
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# Release/build archives created locally.
+# Runtime/source ZIPs belong on GitHub Releases and in the authoritative
+# Google Drive archive, not in Git history.
+/United Nations Space Command*.zip
+/dist/**/*.zip
+/build/**/*.zip
+*.7z
+*.rar
+
+# Local Starsector/save/testing material
+/saves/
+/screenshots/
+/test-output/
+/validation-output/
+
+# Python cache produced by development-only tools
+__pycache__/
+*.py[cod]
+
+# IMPORTANT:
+# Do NOT add a broad "*~" ignore rule.
+# data/weapons/unsc_harpoon_cell.wpn~ is an intentionally tracked dormant
+# runtime asset and must remain visible to Git.

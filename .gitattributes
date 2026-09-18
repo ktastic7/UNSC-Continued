@@ -1,2 +1,32 @@
-# Auto detect text files and perform LF normalization
+# Keep Git's existing automatic text handling and explicitly classify
+# Starsector binary assets so they are never treated as text.
 * text=auto
+
+# Known text/source formats
+*.java      text
+*.json      text
+*.csv       text
+*.md        text
+*.txt       text
+*.version   text
+*.faction   text
+*.ship      text
+*.variant   text
+*.wpn       text
+*.wpn~      text
+*.proj      text
+*.py        text
+*.ps1       text
+
+# Binary runtime assets
+*.png       -text
+*.jpg       -text
+*.jpeg      -text
+*.gif       -text
+*.ogg       -text
+*.wav       -text
+*.jar       -text
+*.class     -text
+*.zip       -text
+*.7z        -text
+*.rar       -text
