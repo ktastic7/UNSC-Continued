@@ -1,0 +1,13 @@
+
+{
+	"graphics":{
+		"blueprint_packages":{
+			"unsc_package_bp":"graphics/icons/cargo/unsc_package_bp.png",
+		},
+		"illustrations":{
+			"unsc_tribute":"graphics/illustrations/unsc_tribute.jpg",
+			"unsc_reach":"graphics/illustrations/unsc_reach.jpg",
+			"unsc_casimir_station":"graphics/illustrations/unsc_casimir_station.jpg",
+		},
+	}
+}
