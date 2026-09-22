@@ -17,13 +17,5 @@ public class UNSC_hullconstruction extends BaseHullMod {
 		//stats.getCombatEngineRepairTimeMult().modifyMult(id, 1f - REPAIR_BONUS * 0.01f);
 		//stats.getCombatWeaponRepairTimeMult().modifyMult(id, 1f - REPAIR_BONUS * 0.01f);
 	}
-	
-	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) HEALTH_BONUS + "%";
-		if (index == 0) return "" + (int) FLUX_RESISTANCE + "%";
-		//if (index == 0) return "" + (int) REPAIR_BONUS + "%";
-		
-		return null;
-	}
 
 }
