@@ -123,6 +123,7 @@ public class UNSCStar {
                 85f,
                 epsilon_eridani_i_distance,
                 190f);
+        epsilon_eridani_i.setCustomDescriptionId("unsc_epsilon_eridani_i");
         addUncolonizedConditions(epsilon_eridani_i,
                 "no_atmosphere",
                 "very_hot",
@@ -327,6 +328,7 @@ public class UNSCStar {
                 165f,
                 circumstance_distance,
                 900f);
+        circumstance.setCustomDescriptionId("unsc_circumstance");
         MarketAPI circumstance_market = UNSC_AddMarketplace.addMarketplace("unsc", "unsc_circumstance_market", circumstance, null,
                 "Circumstance",
                 7,
@@ -379,6 +381,7 @@ public class UNSCStar {
                 135f,
                 beta_gabriel_distance,
                 1260f);
+        beta_gabriel.setCustomDescriptionId("unsc_beta_gabriel");
         MarketAPI beta_gabriel_market = UNSC_AddMarketplace.addMarketplace("unsc", "unsc_beta_gabriel_market", beta_gabriel, null,
                 "Beta Gabriel",
                 4,
@@ -426,6 +429,7 @@ public class UNSCStar {
                 145f,
                 tantalus_distance,
                 1700f);
+        tantalus.setCustomDescriptionId("unsc_tantalus");
         addUncolonizedConditions(tantalus,
                 "irradiated",
                 "rare_ore_rich",
@@ -448,6 +452,7 @@ public class UNSCStar {
                 65f,
                 site_17_distance,
                 2650f);
+        site_17.setCustomDescriptionId("unsc_site_17");
         addUncolonizedConditions(site_17,
                 "ore_sparse",
                 "no_atmosphere",
