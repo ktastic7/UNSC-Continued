@@ -4,10 +4,12 @@ A continued version of AppleMarineXX's **United Nations Space Command** faction 
 
 **Original mod:** AppleMarineXX  
 **Continued and maintained by:** Kemptastic  
-**Current release:** 1.03  
+**Current release:** 1.3.1  
 **Starsector target:** 0.98a-RC8  
 **Loader mod ID:** `UNSC`  
 **Faction ID:** `unsc`
+
+> **Legacy-line note:** 1.3.1 is the final release in the original UNSC Continued 1.x technical identity. Future UNSC Core Continued 2.x releases use a separate mod/update identity and are not automatic upgrades for legacy saves.
 
 > For normal installation, download the packaged runtime ZIP from the **GitHub Releases** page.  
 > GitHub's automatically generated "Source code" archives are not the playable mod package.

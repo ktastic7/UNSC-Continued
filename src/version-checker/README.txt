@@ -1,5 +1,5 @@
-Version Checker support - 1.03 final candidate
-==============================================
+Version Checker support - 1.3.1 final legacy release
+====================================================
 
 Runtime registration:
 - unsc_continued.version
@@ -8,11 +8,12 @@ Runtime registration:
 Remote master target:
 https://raw.githubusercontent.com/ktastic7/UNSC-Continued/HEAD/unsc_continued.version
 
-Final 1.03 local declaration:
+Final 1.3.1 declaration:
 - major: 1
 - minor: 3
-- patch: 0
+- patch: 1
+- modThreadId: 36037
 
-The GitHub repository is maintained manually by the user. Before the exact-artifact final seal, update the repository-root unsc_continued.version to the same final 1.03 version declaration. ChatGPT must treat GitHub as read-only and must not create/edit/commit/push files there.
+The legacy update channel remains permanently attached to the UNSC-Continued 1.x line. It must never be repointed to UNSC Core Continued 2.x.
 
-Version Checker/LunaLib is not a hard dependency; these are passive data declarations.
+Version Checker/LunaLib remains optional; these are passive data declarations and do not add a hard dependency.

@@ -2,6 +2,28 @@
 
 Public release history for **United Nations Space Command - Continued**.
 
+## 1.3.1 — Final Legacy Continued Release
+
+### Compatibility and presentation
+
+- Added Treasure Hunt 2.3.0 data integration so `unsc_package_bp` can enter Treasure Hunt's one-time reward pool when Treasure Hunt is installed.
+- Added and wired custom descriptions for Epsilon Eridani I, Circumstance, Beta Gabriel, Tantalus, and Site 17.
+- Added the 128×128 project icon used by TriOS and similar launchers/managers.
+
+### Maintenance
+
+- Removed the dead `getDescriptionParam()` override from `UNSC_hullconstruction`; its existing weapon/engine health and EMP-resistance effects are unchanged.
+- Rebuilt `UNSC.jar` from the reviewed source against the exact production references.
+
+### Legacy release boundary
+
+- Normalized the public/version-checker identity to semantic version **1.3.1**.
+- 1.3.1 is the final release using loader ID `UNSC`, faction ID `unsc`, and the legacy `unsc_*` namespace.
+- The legacy `unsc_continued.version` update channel remains on this repository and must never automatically point users to the separately namespaced Core Continued 2.x line.
+- No Core Continued 2.0 namespace, Java-package, save-migration, or worldgen-coexistence changes are included here.
+
+---
+
 ## 1.03
 
 ### Version Checker support
