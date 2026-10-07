@@ -56,13 +56,13 @@ United Nations Space Command - Continued
 Git tags use a `v` prefix, for example:
 
 ```text
-v1.03
+v1.3.1
 ```
 
 The in-game mod version omits that prefix:
 
 ```text
-1.03
+1.3.1
 ```
 
 Test or pre-release builds, when publicly distributed, may use an additional suffix and may be marked as a GitHub pre-release.
@@ -80,6 +80,10 @@ Get-FileHash "path\to\file.zip" -Algorithm SHA256
 ```
 
 Compare the resulting hash with the value shown in the release notes.
+
+## Legacy 1.x Update Boundary
+
+1.3.1 is the final release in the legacy UNSC Continued 1.x technical identity. Its `unsc_continued.version` master remains in this repository. Future Core Continued 2.x releases use a separate repository and version declaration; do not repoint the legacy master across that save-breaking boundary.
 
 ## Version Checker
 
